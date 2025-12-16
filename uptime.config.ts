@@ -3,7 +3,7 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 // ========== 状态页配置（精简版） ==========
 const pageConfig: PageConfig = {
-  title: "lyc8503's Status Page", // 状态页标题
+  title: "两颗西柚网站监控", // 状态页标题
   links: [{ link: 'https://123812.xyz', label: '两颗西柚-网站' }] // 头部链接
 }
 
@@ -13,13 +13,10 @@ const workerConfig: WorkerConfig = {
   monitors: [
     // HTTP监控（启用，可直接检测你的网站）
     {
-      id: 'website_monitor', // 唯一ID（不可重复）
-      name: '两颗西柚网站', // 监控名称（状态页显示）
-      method: 'GET', // HTTP请求方法
-      target: 'https://123812.xyz', // 监控目标地址
-      expectedCodes: [200], // 预期响应码（仅200算正常）
-      timeout: 10000, // 超时时间（10秒）
-      headers: { 'User-Agent': 'Uptimeflare' } // 自定义请求头
+      id: '123812.xyz',
+      name: 'My blog',
+      method: 'GET',
+      target: 'https://123812.xyz'
     }
     // TCP监控示例（如需启用，取消注释并补全target）
     // {
